@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculate Total</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Calculate Total</legend>
+		<label>Quantity</label>
+		<input type="number" name="quantity" id="quantity">
+		<br>
+		<label>Unit Price</label>
+		<input type="number" name="unit_price" id="unit_price">
+		<br>
+		<label>Total Price</label>
+		<input type="number" name="total_price" id="total_price">
+
+		<input type="button" name="calculate" value="Total" onclick="totalCalculate()">
+	</fieldset>
+	<script type="text/javascript">
+		function totalCalculate(){
+			var quantity = document.getElementById('quantity').value; // catch quanity id for geting value
+			var unit_price = document.getElementById('unit_price').value; // catch unit_price id for geting value
+			var total_price = quantity*unit_price; // calculate
+
+			document.getElementById('total_price').value=total_price; // pass value into total_price text field value
+
+		}
+	</script>
+</body>
+</html>
